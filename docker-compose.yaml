@@ -1,0 +1,13 @@
+version: "3.1"  # optional since v1.27.0
+services:
+  nordicbet-nhl:
+    image: huscskn/puppeteer:1.0.0
+    container_name: puppeteer
+    volumes:
+     - /var/run/docker.sock:/var/run/docker.sock
+     - "your_file_directory/:/usr/src/puppeteer_app"
+    environment:
+      - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+    restart: always
+    working_dir: /usr/src/puppeteer_app
+    command: bash -c "npm install && npm start"
