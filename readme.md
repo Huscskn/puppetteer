@@ -30,4 +30,4 @@ if you want to use docker image downloaded stable chrome verison
 
 # Version
 
-Current version is node 14.18.9
+Current version is node 14.17.9
